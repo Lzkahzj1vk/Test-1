@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-cloudflare-template",
+  "name": "nextjs-cloudflare",
   "private": true,
   "scripts": {
     "dev": "next dev",
