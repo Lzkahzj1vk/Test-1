@@ -1,24 +1,19 @@
-import { drizzle } from "drizzle-orm/node-postgres";
-import { Pool } from "pg";
+// ملف مؤقت - استخدم Cloudflare D1 أو KV عند الحاجة لقاعدة بيانات
 
-const databaseUrl = process.env.DATABASE_URL;
-
-if (!databaseUrl) {
-  throw new Error("DATABASE_URL is required");
+export interface Database {
+  // placeholder for future database integration
 }
 
-const globalForDb = globalThis as typeof globalThis & {
-  __arenaNextJsPostgresqlPool?: Pool;
-};
+// عند إضافة قاعدة بيانات D1 في Cloudflare، استخدم هذا النمط:
+/*
+import { drizzle } from "drizzle-orm/d1";
 
-export const pool =
-  globalForDb.__arenaNextJsPostgresqlPool ??
-  new Pool({
-    connectionString: databaseUrl,
-  });
+export const db = drizzle(env.DB);
+*/
 
-if (process.env.NODE_ENV !== "production") {
-  globalForDb.__arenaNextJsPostgresqlPool = pool;
-}
+// أو استخدم KV Store:
+/*
+import { KVNamespace } from "@cloudflare/workers-types";
 
-export const db = drizzle(pool);
+export const kv: KVNamespace = env.NEWSLETTER_KV;
+*/
