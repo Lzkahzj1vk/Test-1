@@ -1,13 +1,9 @@
 export const dynamic = 'force-dynamic'
-export const runtime = 'nodejs'
-
-import { db } from "@/db";
-import { sql } from "drizzle-orm";
+export const runtime = 'edge'
 
 export async function GET() {
   try {
-    await db.execute(sql`select 1`);
-    return Response.json({ ok: true });
+    return Response.json({ ok: true, status: 'healthy' }, { status: 200 });
   } catch {
     return Response.json({ ok: false }, { status: 500 });
   }
