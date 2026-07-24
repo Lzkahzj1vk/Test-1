@@ -1,7 +1,11 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "test-1202020sbsbjsjjsjzjdhdv277",
-  "compatibility_date": "2026-07-18",
+  "name": "nextjs-cloudflare",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-07-24",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
   "observability": {
     "enabled": true
   }
