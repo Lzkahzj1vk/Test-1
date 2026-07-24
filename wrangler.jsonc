@@ -1,1 +1,8 @@
-{\n  \"$schema\": \"node_modules/wrangler/config-schema.json\",\n  \"name\": \"test-1202020sbsbjsjjsjzjdhdv277\",\n  \"compatibility_date\": \"2026-07-18\",\n  \"observability\": {\n    \"enabled\": true\n  },\n  \"compatibility_flags\": [\n    \"nodejs_compat\"\n  ]\n}\n
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "test-1202020sbsbjsjjsjzjdhdv277",
+  "compatibility_date": "2026-07-18",
+  "observability": {
+    "enabled": true
+  }
+}
